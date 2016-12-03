@@ -4,13 +4,16 @@
 #include <QObject>
 #include <thread>
 #include <chrono>
+#include <QVector>
+#include "semaforo.h"
+
 using namespace std;
 
 class Trem : public QObject
 {
     Q_OBJECT
 public:
-    Trem(int,int,int);
+    Trem(int,int,int, QVector <Semaforo*>);
     ~Trem();
     void start();
     void run();
@@ -27,6 +30,7 @@ private:
    int y;
    int velocidade;
    bool enable;
+   QVector<Semaforo*> vetorSemaforos;
 };
 
 #endif // TREM_H

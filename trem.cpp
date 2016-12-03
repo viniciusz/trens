@@ -1,12 +1,14 @@
 #include "trem.h"
+#include <QtCore>
 
-Trem::Trem(int id, int x, int y)
+Trem::Trem(int id, int x, int y, QVector<Semaforo *> semaforos)
 {
     this->id = id;
     this->x = x;
     this->y = y;
     velocidade = 250;
     enable = true;
+    vetorSemaforos = semaforos;
 }
 
 Trem::~Trem()

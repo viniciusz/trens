@@ -15,7 +15,7 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     trem.cpp \
-    semaforos.cpp
+    semaforo.cpp
 
 HEADERS  += mainwindow.h \
     trem.h \
